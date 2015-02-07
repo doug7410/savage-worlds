@@ -1,13 +1,5 @@
 'use strict';
 
-/**
- * @ngdoc overview
- * @name swFrontApp
- * @description
- * # swFrontApp
- *
- * Main module of the application.
- */
 angular
   .module('swFrontApp', [
     'ngCookies',
@@ -19,11 +11,10 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl'
+      .when('/edges', {
+        templateUrl: 'views/edges.html',
+        controller: 'EdgesController'
       })
       .otherwise({
         redirectTo: '/'
