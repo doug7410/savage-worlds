@@ -95,20 +95,11 @@ module.exports = function (grunt) {
         //      connect.static(appConfig.app)
         //  ];
         //}
-        middleware: function (connect, options) {
+        middleware: function (connect) {
             var middlewares = [];
-
-            //if (!Array.isArray(options.base)) {
-            //  options.base = [options.base];
-            //}
 
             // Setup the proxy
             middlewares.push(require('grunt-connect-proxy/lib/utils').proxyRequest);
-
-            // Serve static files
-            //options.base.forEach(function(base) {
-            //  middlewares.push(connect.static(base));
-            //});
 
             middlewares.push(connect.static('.tmp'));
 
