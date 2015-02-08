@@ -1,6 +1,6 @@
 'use strict';
 
-describe('[Controller: MainCtrl]', function () {
+describe('[NavigationController]', function () {
 
   var location, scope;
 
