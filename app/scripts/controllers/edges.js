@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('swFrontApp')
-  .controller('EdgesController', function ($scope, edges, categories, ranks) {
+  .controller('EdgesController', function ($scope, edges, categories, ranks,$http) {
     $scope.edges = edges.query();
     $scope.categories = categories.query();
     $scope.ranks = ranks.query();
